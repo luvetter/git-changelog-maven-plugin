@@ -218,7 +218,10 @@ Or in `pom.xml`:
         <configuration>
           <!-- Suffix version with -SNAPSHOT //-->
           <updatePomWithNextSemanticVersionSuffixSnapshot>true</updatePomWithNextSemanticVersionSuffixSnapshot>
-
+            
+          <!-- Regexp patterns used to identify tags that do not qualify as a version tag and should be skipped for versioning //-->
+          <ignoreTagsIfNameMatches>rc.*</ignoreTagsIfNameMatches>
+            
           <!-- Regexp patterns used to identify next version can optionally be adjusted //-->
           <semanticMajorVersionPattern>^[Bb]reaking</semanticMajorVersionPattern>
           <semanticMinorVersionPattern>[Ff]eature</semanticMinorVersionPattern>
